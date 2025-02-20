@@ -1,10 +1,10 @@
 import { Link } from "react-router";
-const Navbar = () => {
+const Navbar = ({ currUser, handleLogout }) => {
     return(
         <div>
-            <Link to="/">Home</Link>
-            <Link to="/login">Home</Link>
-            <Link to="/sign-up">Home</Link>
+            <span>Hello {currUser.fullName}</span>
+            <button onClick={handleLogout}>Logout</button>
+            <Link to="/tasks">Tasks</Link>
         </div>
     );
 };
